@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#dce6dd">
+  <meta name="description" content="Un voyage à travers les applications de ProdX0x. Six créations, un monde à explorer.">
+  <title>ProdX0x — Un monde d’applications</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%232c5148'/%3E%3Cpath d='M11 27V13h9a5 5 0 010 10h-5' fill='none' stroke='%23f8f6e9' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="src/main.js"></script>
+</head>
+<body>
+  <div id="world" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <header class="header">
+    <a class="brand" href="#" aria-label="ProdX0x, début du voyage">ProdX<span>0</span>x<span class="brand-dot">✳</span></a>
+    <span class="header-caption">DES APPLICATIONS. UN UNIVERS.</span>
+    <button class="index-toggle" aria-expanded="false" aria-controls="catalog"><span>Les créations</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button>
+  </header>
+  <main>
+    <section class="story" aria-label="Application au premier plan">
+      <div class="eyebrow"><span class="tiny-line"></span><span id="chapter">LE DÉBUT D’UN VOYAGE</span></div>
+      <div id="intro-copy"><h1>De petites apps.<br>De grands<br><em>horizons.</em></h1><p class="intro-description">Des idées devenues applications.<br>Un univers à parcourir, une création à la fois.</p></div>
+      <div id="app-copy" hidden><h2 id="app-title"></h2><p id="app-tagline"></p></div>
+      <div class="app-summary"><div class="app-icon" id="app-icon" aria-hidden="true">◉</div><div><div class="app-name-row"><strong id="summary-name">Iris</strong><span class="status" id="status">En développement</span></div><span class="device-label" id="device-label">iPhone · Une nouvelle façon de jouer</span></div></div>
+      <button class="discover" id="discover">Rencontrer Iris <span aria-hidden="true">↗</span></button>
+    </section>
+    <div class="world-caption" aria-hidden="true"><span class="caption-line"></span><span id="world-label">01 / LE JARDIN DES POSSIBLES</span></div>
+    <div id="scroll-track" aria-hidden="true"></div>
+  </main>
+  <aside id="catalog" class="catalog" aria-label="Toutes les créations" inert><div class="catalog-heading"><span>L’ARCHIPEL DES IDÉES</span><button id="close-catalog" aria-label="Fermer les créations">×</button></div><h2>Chaque idée,<br><em>son horizon.</em></h2><nav id="catalog-items"></nav><p>De la dernière idée à la toute première.</p></aside>
+  <footer class="footer"><button id="advance" class="scroll-hint"><span class="scroll-symbol" aria-hidden="true">↓</span><span id="advance-label">Faites défiler pour explorer</span></button><nav id="steps" aria-label="Étapes du voyage"></nav><div class="journey-count"><span id="current-count">01</span><span class="count-divider"></span><span id="total-count">06</span></div></footer>
+  <div id="loading" role="status"><span class="loading-flower">✳</span><span>Un monde prend forme…</span></div>
+  <div id="fallback" hidden><h2>Le voyage attend un écran 3D.</h2><p>WebGL n’est pas disponible ici. Vous pouvez tout de même découvrir les applications.</p><button id="fallback-catalog">Voir les créations ↗</button></div>
+  <dialog id="details" aria-labelledby="detail-title"><button class="dialog-close" aria-label="Fermer la présentation">×</button><div class="eyebrow" id="detail-device"></div><h2 id="detail-title"></h2><p id="detail-tagline"></p><p id="detail-description"></p><div id="detail-tech"></div><a id="detail-link" target="_blank" rel="noopener noreferrer">Ouvrir la page de l’application ↗</a><p class="demo-note">Une création de ProdX0x · Présentation de démonstration</p></dialog>
+  <noscript><div class="no-js">Activez JavaScript pour explorer cet univers interactif.</div></noscript>
+</body>
+</html>

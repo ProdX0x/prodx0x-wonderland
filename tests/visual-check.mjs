@@ -1,0 +1,11 @@
+import {chromium} from '@playwright/test';
+import fs from 'node:fs/promises';
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--no-sandbox']});
+const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',msg=>{if(msg.type()==='error')errors.push(msg.text());});
+await page.goto('http://127.0.0.1:4173');await page.waitForSelector('#loading.done');await page.waitForTimeout(1800);await fs.mkdir('tests/screenshots',{recursive:true});await page.screenshot({path:'tests/screenshots/desktop.png'});console.log(JSON.stringify({errors,title:await page.title(),canvas:await page.locator('canvas').count()}));
+await page.setViewportSize({width:1366,height:768});await page.waitForTimeout(400);await page.screenshot({path:'tests/screenshots/macbook.png'});await page.setViewportSize({width:1440,height:1000});
+await page.getByRole('button',{name:'03 — GramGramTV',exact:true}).click();await page.waitForTimeout(3500);await page.screenshot({path:'tests/screenshots/tv.png'});console.log('Current app:',await page.locator('#summary-name').textContent());
+await page.getByRole('button',{name:'05 — MyApp Hub',exact:true}).click();await page.waitForTimeout(2800);await page.screenshot({path:'tests/screenshots/mac.png'});
+await page.setViewportSize({width:768,height:1024});await page.getByRole('button',{name:'06 — Pausa',exact:true}).click();await page.waitForTimeout(2800);await page.screenshot({path:'tests/screenshots/ipad.png'});
+await page.setViewportSize({width:390,height:844});await page.getByRole('link',{name:'ProdX0x, début du voyage'}).click();await page.waitForTimeout(3500);await page.screenshot({path:'tests/screenshots/mobile.png'});console.log('Final errors:',errors);await browser.close();

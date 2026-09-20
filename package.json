@@ -1,0 +1,16 @@
+{
+  "name": "prodx0x-wonderland-prototype",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/catalog.test.mjs",
+    "test:browser": "playwright test",
+    "test:visual": "node tests/visual-check.mjs",
+    "test:visual:v2": "node tests/cinematic-visual.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}
