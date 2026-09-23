@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <meta name="theme-color" content="#dce6dd">
-<meta name="description" content="Assistance d'Iris, le jeu contrôlé par le regard. Comment jouer, calibration, achats, contact.">
+<meta name="description" content="Assistance d'Iris, le jeu contrôlé par le regard. Comment jouer, calibration, achats, accès promotionnel et contact.">
 <title>Iris — assistance</title>
 <link rel="alternate" hreflang="fr" href="https://steve-s.net/iris/">
 <link rel="alternate" hreflang="en" href="https://steve-s.net/en/iris/">
@@ -36,43 +36,65 @@ a{color:var(--accent)}
 <h1>Iris</h1>
 <p class="lead">Un jeu contrôlé par le regard. Ce que vous regardez s'éloigne.</p>
 
-<p>Des lueurs flottent dans le noir, et chacune attend son iris. Les regarder droit dessus les chasse&nbsp;: pour les guider, il faut poser les yeux à côté. Iris est un jeu d'adresse et d'attention. Il ne promet aucun effet de santé.</p>
+<p>Des lueurs flottent dans le noir, et chacune attend son iris. Les regarder droit dessus les chasse&nbsp;: pour les guider, il faut poser les yeux à côté.</p>
+
+<p>Iris est un jeu d'adresse, d'observation et de contrôle du regard.</p>
 
 <h2>Ce qu'il faut pour jouer</h2>
 <ul>
-<li>Un iPhone équipé de la caméra frontale TrueDepth. Sans elle, Iris affiche un écran d'indisponibilité au lieu de démarrer.</li>
-<li>Le jeu se joue en portrait uniquement.</li>
-<li>Tenez l'iPhone à hauteur des yeux, à une longueur de bras, dans une lumière régulière.</li>
+<li>Iris demande un iPhone sur lequel le suivi facial ARKit est disponible.</li>
+<li>Si le suivi facial ARKit n'est pas disponible sur l'appareil, Iris indique que le contrôle par le regard est indisponible, au lieu de lancer la calibration du regard.</li>
+<li>Le jeu se joue en orientation portrait.</li>
+<li>Pour un meilleur suivi, tenez l'iPhone à hauteur des yeux, à une distance confortable, dans une lumière régulière.</li>
 </ul>
 
 <h2>Premier lancement</h2>
-<p>Quatre écrans expliquent la mécanique. Vous pouvez les passer, et les revoir à tout moment par «&nbsp;Comment jouer&nbsp;», depuis l'écran d'accueil ou les réglages.</p>
-<p>L'autorisation d'accès à la caméra est demandée au premier niveau seulement.</p>
+<p>Les écrans d'introduction expliquent l'interaction par le regard. Vous pouvez revoir ces explications à tout moment par «&nbsp;Comment jouer&nbsp;», depuis l'écran d'accueil ou les réglages.</p>
+<p>L'autorisation d'accès à la caméra est demandée lorsque Iris a besoin de la caméra frontale pour le jeu au regard.</p>
 
 <h2>Calibration</h2>
-<p>Une courte séquence de fixations apprend à Iris la façon dont vous regardez. Elle se refait à tout moment depuis <strong>Réglages → Recalibrer le regard</strong>.</p>
-<p class="note">Le suivi demande quelques secondes de stabilisation après la calibration. Si votre visage sort du champ, le niveau se met en pause et reprend seul.</p>
+<p>Une courte calibration adapte le contrôle par le regard à votre façon de regarder l'écran.</p>
+<p>Vous pouvez la refaire à tout moment depuis <strong>Réglages → Recalibrer le regard</strong>.</p>
+<p class="note">Si le suivi facial devient temporairement indisponible pendant une partie, l'interaction par le regard peut se mettre en pause jusqu'à ce que le suivi redevienne disponible.</p>
 
-<h2>Chapitres et achats</h2>
+<h2>Chapitres gratuits et jeu complet</h2>
 <ul>
-<li>Les chapitres <strong>I, II et III</strong> — 19 niveaux sur 82 — sont jouables sans aucun achat, pour toujours.</li>
-<li>Les chapitres <strong>IV à XII</strong> demandent l'accès complet, qui est un <strong>achat unique</strong>. Aucun abonnement, aucun renouvellement.</li>
-<li>Le prix affiché est celui que l'App Store formate pour votre boutique.</li>
-<li>«&nbsp;Restaurer mes achats&nbsp;» est disponible sur l'écran d'accès complet et dans les réglages.</li>
-<li>Si vous disposez d'un code d'accès, «&nbsp;Utiliser un code d'accès&nbsp;» ouvre la feuille de rédemption officielle d'Apple. À l'expiration, votre progression est conservée&nbsp;; seuls les chapitres payants se reverrouillent.</li>
+<li>Les chapitres <strong>I, II et III</strong> — 19 niveaux sur 82 — se jouent sans aucun achat.</li>
+<li><strong>Iris — Full Game</strong> ouvre les chapitres IV à XII.</li>
+<li>L'achat <strong>Iris — Full Game</strong> est un achat unique et ne se renouvelle pas.</li>
+<li>Le prix affiché pour Full Game est fourni et mis en forme par l'App Store pour votre boutique.</li>
+<li>«&nbsp;Restaurer mes achats&nbsp;» est disponible depuis l'écran d'accès complet et depuis les réglages.</li>
 </ul>
+
+<h2>Accès promotionnel</h2>
+<p>Un accès promotionnel temporaire peut être accordé par un code d'accès Apple (Offer Code).</p>
+<p>Iris Promotional Access n'est pas proposé à l'achat direct dans Iris.</p>
+<p>Si l'échange d'un code est possible sur votre appareil, choisissez «&nbsp;Utiliser un code d'accès&nbsp;» depuis l'écran d'accès complet. Iris ouvre alors l'interface d'échange de code d'Apple.</p>
+<p>Apple prend en charge l'échange. Iris ne lit pas le code, ne le conserve pas et ne le valide pas lui-même. Une fois l'opération terminée du côté d'Apple, Iris relit le droit d'accès auprès de StoreKit et reconnaît l'accès temporaire.</p>
+<p>À la fin d'un accès promotionnel temporaire, votre progression est conservée. Les chapitres qui demandent un accès se reverrouillent, sauf si un autre droit d'accès valide existe.</p>
+
+<h2>Appareils non pris en charge</h2>
+<p>Si le suivi facial ARKit n'est pas disponible sur un appareil, Iris indique que le contrôle par le regard est indisponible et n'y ouvre aucune nouvelle acquisition liée au regard.</p>
+<p>Les droits d'accès déjà obtenus restent reconnus, et «&nbsp;Restaurer mes achats&nbsp;» reste disponible.</p>
 
 <div class="card">
 <h2 style="margin-top:0">Une question&nbsp;?</h2>
-<p>Écrivez à <a href="mailto:contact@steve-s.net">contact@steve-s.net</a>. Précisez votre modèle d'iPhone et la version d'iOS&nbsp;: cela aide beaucoup.</p>
+<p>Écrivez à <a href="mailto:contact@steve-s.net">contact@steve-s.net</a>.</p>
+<p>Préciser votre modèle d'iPhone et votre version d'iOS aide beaucoup lors d'un signalement technique.</p>
 </div>
 
 <h2>Confidentialité</h2>
-<p>Aucune image de la caméra n'est enregistrée ni transmise. Le détail est sur la page <a href="/iris/privacy-iris/">politique de confidentialité</a>.</p>
+<p>Iris utilise la caméra frontale et le suivi facial ARKit pour le jeu au regard. Les images de la caméra ne sont ni enregistrées ni envoyées par Iris.</p>
+<p>Le détail se trouve sur la page <a href="/iris/privacy-iris/">politique de confidentialité</a>.</p>
+
+<h2>Conditions d'utilisation</h2>
+<p>Iris est couvert par le contrat de licence utilisateur final standard d'Apple.</p>
+<p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Lire les conditions d'utilisation</a>.</p>
 
 <div class="foot">
 <span>Iris — une création de ProdX0x</span>
 <a href="/iris/privacy-iris/">Confidentialité</a>
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Conditions d'utilisation</a>
 <a href="/en/iris/">English</a>
 <a href="/">Toutes les créations</a>
 </div>
