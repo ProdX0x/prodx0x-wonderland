@@ -55,30 +55,58 @@ Iris uses the front camera with ARKit face tracking to estimate where you are lo
 </p>
 
 <p>
-Iris does not record camera images, video or face data. Nothing is sent to our servers: Iris contains no analytics service, no advertising tracker and no backend used to collect gameplay, face or gaze data.
+Iris does not record camera images, video or raw face measurements, and does not send face or gaze data anywhere. Iris contains no analytics service, no advertising tracker and no server of its own. Details are given in the Face Data (TrueDepth) section below.
+</p>
+
+<h2 id="face-data">Face Data (TrueDepth)</h2>
+
+<p>
+<strong>What Iris uses.</strong> Iris is played with your eyes. It uses the TrueDepth front camera through ARKit face tracking, Apple's technology built into iOS. While the camera is active, Iris uses the following face data provided by ARKit for each camera frame: the position and orientation of your head, the position of your eyes, the point your eyes are looking at as estimated by ARKit, and two values indicating whether each eye is blinking. With each frame, Iris also uses technical information supplied by ARKit: whether a face is being tracked, the time of the frame and the orientation of the camera. Iris does not use camera images, depth data, the 3D mesh of your face or any other facial expression values. Only one face is tracked.
+</p>
+
+<p>
+<strong>Why.</strong> This data is used for one purpose only: making the game work. Iris works out where on the screen you are looking, and that gaze moves the spheres. Some levels also use your head movements. Blink values are used only during gaze setup and calibration, to set aside measurements taken while your eyes are closed.
+</p>
+
+<p>
+<strong>Processing on your device.</strong> All processing takes place on your device. Face data is held in the app's memory only while it is needed for the game or the calibration. Iris does not record photos, video, camera images or raw face measurements, and keeps no history of your gaze. The camera is active only on the gaze setup and game screens, including the results screen shown at the end of a level. It stops when you leave these screens and pauses when Iris goes to the background. The technical messages Iris writes to the iOS system log may contain calibration summaries (accuracy values, screen size, axis orientation), but never images or raw face measurements.
+</p>
+
+<p>
+<strong>What is kept.</strong> Iris keeps one item derived from gaze tracking: your calibration profile, saved in Iris's local settings on your device. It contains a format version number; six correction coefficients that fit the gaze estimate to your screen; which camera directions correspond to the right and to the top of the screen; the screen orientation; the width and height of the play area; an estimate of the physical size of the screen and of the camera position; the date of the calibration; two accuracy measurements; and whether the calibration passed its accuracy check. It contains no image and no point, mesh or shape of your face. Iris also stores your game progress (levels completed, best times, fewest intrusions, rewards earned, game elements already met, total play time) and your preferences. These are game results and settings, not face data.
+</p>
+
+<p>
+<strong>How long it is kept.</strong> Each calibration you complete and save replaces the previous profile. After 30 days, Iris no longer uses a profile, but the profile remains stored on your device until a new calibration is saved or the app is deleted. Like all local app data, it may be included in the device backups (iCloud or computer) that you make with iOS. Iris has no access to these backups.
+</p>
+
+<p>
+<strong>No transmission, no third parties.</strong> Iris does not send face data, gaze data or the calibration profile anywhere: not to us and not to anyone else. This data is not shared, disclosed or sold. Iris contains no analytics, advertising or tracking service and no third-party SDK. The only network communication in Iris is made by Apple's StoreKit with the App Store for purchases, and it contains no face data.
+</p>
+
+<p>
+<strong>No other use.</strong> Iris never uses face data for advertising, marketing, analytics, authentication, identifying a person or building a user profile.
+</p>
+
+<p>
+<strong>Your consent, and how to withdraw it.</strong> Iris uses the camera only after you allow it in the iOS permission request, shown before your first game. You can withdraw this permission at any time in the iOS Settings app, under Iris › Camera. Iris can then no longer use the camera, and the game cannot be played. In Iris, Settings › Recalibrate Gaze lets you redo the calibration.
+</p>
+
+<p>
+<strong>Deletion.</strong> To erase the calibration profile and all Iris data from your device, delete the app: iOS then erases its local data. Copies already contained in an iOS backup are not erased when you delete the app; they remain for as long as that backup is kept. "Reset Progress" in Iris erases your progress but not the calibration profile. Because nothing is transmitted to us, we hold no face data about you to delete.
 </p>
 
 <h2>What stays on your device</h2>
 
 <ul>
-<li>your gaze calibration coefficients;</li>
+<li>your gaze calibration profile (described in Face Data (TrueDepth) above);</li>
 <li>your progress through the chapters;</li>
 <li>your preferences for sound, ambience, vibration and the gaze marker;</li>
 <li>a local flag recording that the introductory explanation has already been viewed.</li>
 </ul>
 
 <p>
-This information is stored locally on your device. Iris does not associate it with an Iris account, advertising identifier or user profile, and it is not transmitted to us.
-</p>
-
-<h2>Camera and gaze processing</h2>
-
-<p>
-The front camera is used through ARKit face tracking to estimate where you are looking. Iris uses the resulting tracking information for gaze-based gameplay and calibration.
-</p>
-
-<p>
-Iris does not save camera images or video, and does not send camera, face or gaze information to a server.
+This information is stored locally on your device. Iris does not associate it with an Iris account, advertising identifier or user profile, and it is not transmitted to us. Like all local app data, it may be included in the device backups you make with iOS.
 </p>
 
 <h2>Purchases</h2>
@@ -113,12 +141,13 @@ Accordingly, Iris is declared in App Store privacy information as collecting no 
 
 <div class="card">
 <h2 style="margin-top:0">Contact</h2>
+<p>Iris is published by Stéphane SAULNIER, who is responsible for this privacy policy.</p>
 <p>
 <a href="mailto:contact@steve-s.net">contact@steve-s.net</a>
 </p>
 </div>
 
-<p class="note">Last updated: 23 September 2026.</p>
+<p class="note">Last updated: 13 October 2026.</p>
 
 <div class="foot">
 <span>Iris &mdash; made by ProdX0x</span>

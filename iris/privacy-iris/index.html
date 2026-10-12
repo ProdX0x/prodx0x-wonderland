@@ -38,21 +38,28 @@ a{color:var(--accent)}
 
 <p>Iris utilise la caméra frontale et le suivi facial ARKit pour estimer où vous regardez. C'est ce regard qui déplace les sphères du jeu.</p>
 
-<p>Iris n'enregistre aucune image de la caméra, aucune vidéo et aucune donnée de visage. Rien n'est envoyé vers nos serveurs&nbsp;: Iris ne contient aucun service d'analyse, aucun outil de suivi publicitaire et aucun serveur destiné à recueillir des données de jeu, de visage ou de regard.</p>
+<p>Iris n'enregistre aucune image de la caméra, aucune vidéo et aucune mesure brute du visage, et n'envoie nulle part de données du visage ou du regard. Iris ne contient aucun service d'analyse, aucun outil de suivi publicitaire et aucun serveur qui lui soit propre. Le détail figure ci-dessous, dans la section Données du visage (TrueDepth).</p>
+
+<h2 id="donnees-du-visage">Données du visage (TrueDepth)</h2>
+<p><strong>Ce qu'Iris utilise.</strong> Iris se joue avec les yeux. Il utilise la caméra frontale TrueDepth au travers du suivi facial d'ARKit, la technologie d'Apple intégrée à iOS. Tant que la caméra est active, Iris utilise les données du visage suivantes, fournies par ARKit pour chaque image de la caméra&nbsp;: la position et l'orientation de votre tête, la position de vos yeux, le point que regardent vos yeux tel qu'estimé par ARKit, et deux valeurs indiquant si chaque œil est en train de cligner. Avec chaque image, Iris utilise aussi des informations techniques fournies par ARKit&nbsp;: si un visage est suivi, l'heure de l'image et l'orientation de la caméra. Iris n'utilise ni les images de la caméra, ni les données de profondeur, ni le maillage 3D de votre visage, ni aucune autre valeur d'expression du visage. Un seul visage est suivi.</p>
+<p><strong>Pourquoi.</strong> Ces données servent à une seule chose&nbsp;: faire fonctionner le jeu. Iris en déduit l'endroit de l'écran que vous regardez, et c'est ce regard qui déplace les sphères. Certains niveaux utilisent aussi les mouvements de votre tête. Les valeurs de clignement servent uniquement pendant la préparation du regard et la calibration, pour écarter les mesures prises les yeux fermés.</p>
+<p><strong>Traitement sur votre appareil.</strong> Tout le traitement a lieu sur votre appareil. Les données du visage ne sont gardées dans la mémoire de l'app que le temps nécessaire au jeu ou à la calibration. Iris n'enregistre ni photo, ni vidéo, ni image de la caméra, ni mesure brute du visage, et ne garde aucun historique de votre regard. La caméra n'est active que sur les écrans de préparation du regard et de jeu, y compris l'écran de résultat affiché à la fin d'un niveau. Elle s'arrête quand vous quittez ces écrans et se met en pause quand Iris passe en arrière-plan. Les messages techniques qu'Iris écrit dans le journal système d'iOS peuvent contenir des résumés de calibration (valeurs de précision, taille de l'écran, orientation des axes), mais jamais d'image ni de mesure brute du visage.</p>
+<p><strong>Ce qui est conservé.</strong> Iris conserve un seul élément issu du suivi du regard&nbsp;: votre profil de calibration, enregistré dans les réglages locaux d'Iris sur votre appareil. Il contient un numéro de version du format&nbsp;; six coefficients de correction qui ajustent l'estimation du regard à votre écran&nbsp;; les directions de la caméra qui correspondent à la droite et au haut de l'écran&nbsp;; l'orientation de l'écran&nbsp;; la largeur et la hauteur de la zone de jeu&nbsp;; une estimation de la taille physique de l'écran et de la position de la caméra&nbsp;; la date de la calibration&nbsp;; deux mesures de précision&nbsp;; et l'indication que la calibration a réussi ou non son contrôle de précision. Il ne contient aucune image et aucun point, maillage ou forme de votre visage. Iris conserve aussi votre progression (niveaux terminés, meilleurs temps, plus petit nombre d'intrusions, éclats obtenus, éléments de jeu déjà rencontrés, temps de jeu total) et vos préférences. Ce sont des résultats de jeu et des réglages, pas des données du visage.</p>
+<p><strong>Durée de conservation.</strong> Chaque calibration que vous terminez et enregistrez remplace le profil précédent. Au-delà de 30 jours, Iris n'utilise plus un profil, mais celui-ci reste stocké sur votre appareil jusqu'à l'enregistrement d'une nouvelle calibration ou la suppression de l'app. Comme toutes les données locales des apps, il peut figurer dans les sauvegardes de votre appareil (iCloud ou ordinateur) que vous faites avec iOS. Iris n'a pas accès à ces sauvegardes.</p>
+<p><strong>Aucune transmission, aucun tiers.</strong> Iris n'envoie nulle part les données du visage, les données du regard ni le profil de calibration&nbsp;: ni à nous, ni à personne d'autre. Ces données ne sont ni partagées, ni communiquées, ni vendues. Iris ne contient aucun service d'analyse, de publicité ou de suivi, ni aucun SDK tiers. La seule communication réseau d'Iris est celle qu'effectue StoreKit, d'Apple, avec l'App Store pour les achats&nbsp;; elle ne contient aucune donnée du visage.</p>
+<p><strong>Aucun autre usage.</strong> Iris n'utilise jamais les données du visage pour la publicité, le marketing, l'analyse statistique, l'authentification, l'identification d'une personne ou la création d'un profil d'utilisateur.</p>
+<p><strong>Votre accord, et comment le retirer.</strong> Iris n'utilise la caméra qu'après votre autorisation, donnée dans la demande d'iOS affichée avant votre première partie. Vous pouvez la retirer à tout moment dans l'app Réglages d'iOS, sous Iris › Caméra. Iris ne peut alors plus utiliser la caméra, et le jeu ne peut plus être joué. Dans Iris, réglages › Recalibrer le regard permet de refaire la calibration.</p>
+<p><strong>Suppression.</strong> Pour effacer de votre appareil le profil de calibration et toutes les données d'Iris, supprimez l'app&nbsp;: iOS efface alors ses données locales. Les copies déjà présentes dans une sauvegarde iOS ne sont pas effacées par la suppression de l'app&nbsp;; elles restent tant que cette sauvegarde est conservée. « Réinitialiser la progression », dans Iris, efface votre progression mais pas le profil de calibration. Comme rien ne nous est transmis, nous ne détenons aucune donnée de votre visage à effacer.</p>
 
 <h2>Ce qui reste sur votre appareil</h2>
 <ul>
-<li>les coefficients de calibration de votre regard&nbsp;;</li>
+<li>votre profil de calibration du regard (décrit plus haut, dans Données du visage (TrueDepth))&nbsp;;</li>
 <li>votre progression dans les chapitres&nbsp;;</li>
 <li>vos préférences de son, d'ambiance, de vibrations et d'indicateur de regard&nbsp;;</li>
 <li>un indicateur local signalant que l'explication d'introduction a déjà été vue.</li>
 </ul>
 <p>Ces informations sont conservées localement sur votre appareil. Iris ne les associe ni à un compte Iris, ni à un identifiant publicitaire, ni à un profil d'utilisateur.</p>
-<p>Ces informations restent sur l'appareil et ne nous sont pas transmises. Dans la déclaration de confidentialité de l'App Store, ce stockage strictement local n'est donc pas déclaré comme une collecte de données.</p>
-
-<h2>Traitement de la caméra et du regard</h2>
-<p>La caméra frontale est utilisée à travers le suivi facial ARKit pour estimer où vous regardez. Iris se sert des informations de suivi obtenues pour le jeu au regard et pour la calibration.</p>
-<p>Iris n'enregistre ni image de la caméra ni vidéo, et n'envoie à aucun serveur d'information de caméra, de visage ou de regard.</p>
+<p>Ces informations restent sur l'appareil et ne nous sont pas transmises. Comme toutes les données locales des apps, elles peuvent figurer dans les sauvegardes de votre appareil que vous faites avec iOS. Dans la déclaration de confidentialité de l'App Store, ce stockage strictement local n'est donc pas déclaré comme une collecte de données.</p>
 
 <h2>Achats</h2>
 <p>Les achats et l'accès promotionnel sont gérés par l'App Store et StoreKit. Iris ne reçoit ni les identifiants de votre compte Apple, ni vos informations de paiement.</p>
@@ -69,10 +76,11 @@ a{color:var(--accent)}
 
 <div class="card">
 <h2 style="margin-top:0">Contact</h2>
+<p>Iris est publié par Stéphane SAULNIER, responsable de cette politique de confidentialité.</p>
 <p><a href="mailto:contact@steve-s.net">contact@steve-s.net</a></p>
 </div>
 
-<p class="note">Dernière mise à jour&nbsp;: 23 septembre 2026.</p>
+<p class="note">Dernière mise à jour&nbsp;: 13 octobre 2026.</p>
 
 <div class="foot">
 <span>Iris — une création de ProdX0x</span>
