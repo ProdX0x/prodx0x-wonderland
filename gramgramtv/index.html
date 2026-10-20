@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#dce6dd">
+<meta name="description" content="GramGramTV : vos conversations, chaînes et contenus Telegram prennent place sur grand écran. Une expérience pensée spécialement pour Apple TV, la Siri Remote et le confort du salon.">
+<title>GramGramTV — présentation et assistance</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%232c5148'/%3E%3Cpath d='M11 27V13h9a5 5 0 010 10h-5' fill='none' stroke='%23f8f6e9' stroke-width='3'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#29483f;--muted:#698077;--paper:#f7f7ec;--accent:#5a7f69;--rule:#54745633}
+*{box-sizing:border-box}
+body{margin:0;background:#dce6dd;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-synthesis:none;line-height:1.75}
+.wrap{max-width:720px;margin:0 auto;padding:calc(48px + env(safe-area-inset-top,0px)) 24px calc(64px + env(safe-area-inset-bottom,0px))}
+.brand{font-size:22px;font-weight:750;letter-spacing:-1.3px;display:inline-block;margin-bottom:34px}
+.brand>span:first-child{font-weight:350}
+.eyebrow{display:flex;align-items:center;gap:11px;font-size:9px;font-weight:550;letter-spacing:2.3px;color:var(--muted);text-transform:uppercase}
+.tiny-line{height:1px;width:25px;background:#557566;flex:none}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(38px,7vw,58px);line-height:1.08;letter-spacing:-2px;font-weight:400;margin:20px 0 10px}
+h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(22px,4vw,28px);font-weight:400;letter-spacing:-.8px;margin:44px 0 12px}
+h3{font-size:16px;font-weight:650;margin:0 0 4px}
+p,li{font-size:15px;color:#3d5a50}
+.lead{font-family:Georgia,serif;font-size:clamp(18px,3vw,22px);line-height:1.5;color:var(--accent);margin:0 0 30px}
+ul{padding-left:20px}li{margin:7px 0}
+a{color:var(--accent)}
+.card{background:var(--paper);border:1px solid #fff;border-radius:18px;padding:22px 24px;margin:22px 0;box-shadow:0 10px 40px #243f3510}
+.card h2{margin-top:0}
+.card p:last-child{margin-bottom:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:22px 0}
+.grid .card{margin:0;padding:18px 20px}
+.grid .card p{margin:0}
+.media{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:18px;background:#0b1530;box-shadow:0 10px 40px #243f3522}
+figure{margin:22px 0}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 22px;border-radius:14px;font-weight:650;font-size:15px;text-decoration:none;border:1px solid var(--accent);color:var(--accent);line-height:1.3;text-align:center}
+.btn.primary{background:#2c5148;border-color:#2c5148;color:#f8f6e9}
+.checks{list-style:none;padding:0;margin:16px 0 0}
+.checks li{padding-left:26px;position:relative}
+.checks li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+.foot{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 18px}
+.note{font-size:12px;color:var(--muted)}
+@media (max-width:520px){.btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="brand" href="/">ProdX<span>0</span>x</a>
+
+<video class="media" src="/gramgramtv/assets/GramGramTVIntro.mp4" poster="/gramgramtv/assets/GramGramTVLaunch.jpg" width="832" height="464" autoplay loop muted playsinline controls preload="metadata" aria-label="GramGramTV : vidéo d'introduction"></video>
+
+<div class="eyebrow" style="margin-top:34px"><span class="tiny-line"></span><span>Conçu pour Apple TV · tvOS</span></div>
+<h1>GramGramTV</h1>
+<p class="lead">Vos conversations, chaînes et contenus Telegram prennent place sur grand écran.</p>
+<p>Une expérience pensée spécialement pour Apple TV, la Siri Remote et le confort du salon.</p>
+
+<div class="btns">
+<a class="btn primary" href="https://testflight.apple.com/join/Jp6Rv86K" rel="noopener">Tester GramGramTV avec TestFlight</a>
+<a class="btn" href="#fonctionnalites">Découvrir GramGramTV</a>
+</div>
+
+<figure>
+<img class="media" src="/gramgramtv/assets/GramGramTV-Accueil.jpeg" width="1920" height="1080" decoding="async" alt="GramGramTV sur Apple TV — écran d'accueil">
+</figure>
+
+<h2>Telegram pensé pour votre téléviseur</h2>
+<p>GramGramTV adapte les conversations, médias et contenus Telegram à l’interface, au focus et à la télécommande de l’Apple TV.</p>
+
+<figure>
+<img class="media" src="/gramgramtv/assets/GramGramTV-Messages.jpeg" width="1920" height="1080" loading="lazy" decoding="async" alt="GramGramTV — Conversations Telegram sur Apple TV">
+<figcaption>Conversations, groupes et chaînes sur grand écran</figcaption>
+</figure>
+<figure>
+<img class="media" src="/gramgramtv/assets/GramGramTV-Medias.jpeg" width="1920" height="1080" loading="lazy" decoding="async" alt="GramGramTV — Médias Telegram sur Apple TV">
+<figcaption>Vidéos, images et contenus multimédias</figcaption>
+</figure>
+
+<h2 id="fonctionnalites">Telegram prend une nouvelle dimension</h2>
+<p>Une interface spécifiquement conçue pour l’utilisation depuis un canapé, sur un grand écran.</p>
+
+<div class="grid">
+<div class="card"><h3>Conversations</h3><p>Retrouvez vos discussions privées, groupes et chaînes Telegram directement depuis votre Apple TV.</p></div>
+<div class="card"><h3>Vidéos sur grand écran</h3><p>Consultez les contenus vidéo depuis votre téléviseur grâce à une expérience adaptée à tvOS.</p></div>
+<div class="card"><h3>Médias</h3><p>Images, vidéos et autres contenus Telegram sont regroupés dans une interface conçue pour la télévision.</p></div>
+<div class="card"><h3>Bibliothèque</h3><p>Accédez aux documents et contenus disponibles dans vos conversations et chaînes.</p></div>
+<div class="card"><h3>Recherche</h3><p>Retrouvez plus facilement conversations et contenus grâce à la recherche intégrée.</p></div>
+<div class="card"><h3>Expérience tvOS</h3><p>Focus Apple TV, navigation à la Siri Remote et interface conçue pour être lisible à plusieurs mètres.</p></div>
+</div>
+
+<h2>Six espaces. Une seule expérience.</h2>
+<div class="grid">
+<div class="card"><h3>Accueil</h3><p>Vos contenus essentiels</p></div>
+<div class="card"><h3>Échanges</h3><p>Conversations et chaînes</p></div>
+<div class="card"><h3>Médias</h3><p>Images et vidéos</p></div>
+<div class="card"><h3>Bibliothèque</h3><p>Documents et contenus</p></div>
+<div class="card"><h3>Recherche</h3><p>Retrouvez vos contenus</p></div>
+<div class="card"><h3>Réglages</h3><p>Votre application</p></div>
+</div>
+
+<h2>Pensée pour Apple TV</h2>
+<p>GramGramTV ne transpose pas simplement une application mobile sur un téléviseur.</p>
+<p>Son interface est conçue pour le grand écran, le moteur de focus tvOS et la Siri Remote.</p>
+<ul class="checks">
+<li>Navigation optimisée pour la Siri Remote</li>
+<li>Interface lisible à distance</li>
+<li>Navigation native tvOS</li>
+<li>Lecture multimédia sur grand écran</li>
+</ul>
+<figure>
+<img class="media" src="/gramgramtv/assets/GramGramTV-Echanges-1.jpeg" width="1920" height="1080" loading="lazy" decoding="async" alt="GramGramTV — conversation sur Apple TV">
+</figure>
+
+<div class="card">
+<h2>Confidentialité et transparence</h2>
+<p>GramGramTV utilise votre propre compte Telegram afin de vous donner accès aux contenus auxquels vous êtes autorisé.</p>
+<p>Certaines fonctions peuvent également utiliser des services externes nécessaires à l’affichage ou à l’enrichissement des contenus.</p>
+<ul class="checks">
+<li>Connexion à votre propre compte</li>
+<li>Authentification Telegram par QR code</li>
+<li>Pas de réseau publicitaire intégré</li>
+<li>Politique de confidentialité accessible</li>
+</ul>
+<div class="btns"><a class="btn" href="/gramgramtv/privacy-ggtv/">Lire la politique de confidentialité</a></div>
+</div>
+
+<h2>Découvrez GramGramTV sur Apple TV</h2>
+<p>GramGramTV est actuellement en phase bêta.</p>
+<div class="btns">
+<a class="btn primary" href="https://testflight.apple.com/join/Jp6Rv86K" rel="noopener">Tester GramGramTV avec TestFlight</a>
+</div>
+
+<div class="foot">
+<span>GramGramTV · © 2026 Stéphane Saulnier / ProdX0x<br>Application conçue pour Apple TV</span>
+<a href="/gramgramtv/privacy-ggtv/">Politique de confidentialité</a>
+<a href="mailto:contact@steve-s.net">Contact</a>
+<a href="/">Toutes les créations</a>
+</div>
+</div>
+</body>
+</html>
